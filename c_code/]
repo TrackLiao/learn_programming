@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+/* char with pointer, read-only */
+/* char * name = "John Smith"; */
+
+/* local character array */
+/* char name[] = "John Smith"; */
+
+/* String Length */
+/* strlen(name) */
+int main()
+{
+    printf("Hello world\n");
+    return 0;
+}
+
