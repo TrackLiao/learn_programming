@@ -27,3 +27,33 @@ plt.plot(ransom['letter'], ransom['frequency'])
 suspect = credit_records['suspect']
 #select with a dot, column name can not contain special character
 price = credit_records.price
+
+
+plt.plot(x, y, argument....)
+# color="tomato", you can search wiki for web colors for more option
+# linwidth=1 , you can change to different number, 1 is default value
+# linestyle='-', other option are --, -., :
+# marker='x', other option are s, o, d, *, h 
+
+#setting a style
+plt.style.use('fivethirtyeight'), # other option: ggplot, seaborn, default
+
+# line plot,  good for ordered data
+# scatter plot good for unorderd data
+# bar chart good for comparison of categorical data
+plt.scatter(df.age, df.height)
+#markder transparency
+alpha=0.1 # the smaller the number, the more tranparent it is
+
+plt.bar(df.label, df.height)
+plt.ylable("something")
+
+#horizontal bar chart, good when we have many bars
+plt.barh(df.label, df.height)
+
+#error bar
+plt.bar(df.x, df.y, yerr=df.error)
+
+# stacked bar chart
+plt.bar(df.x, df.dog)
+plt.bar(df.x, df.cat, bottom=df.dog)
