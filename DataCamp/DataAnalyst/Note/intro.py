@@ -50,8 +50,8 @@ plt.style.use('fivethirtyeight'), # other option: ggplot, seaborn, default
 
 plt.style.available # show avaliable style
 # line plot,  good for ordered data
-# scatter plot good for unorderd data
-# bar chart good for comparison of categorical data
+# scatter plot good for unorderd data, can be used for correlation
+# bar chart good for comparison of categorical data, can be use to see distribution
 plt.scatter(df.age, df.height)
 #markder transparency
 alpha=0.1 # the smaller the number, the more tranparent it is
@@ -79,3 +79,83 @@ plt.hist(data, range(xmin, xmax)) # focus on specific range
 # each bar porportion of the entire dataset
 plt.hist(male, density=True)
 plt.hist(female, density=True)
+
+
+## Intermediate Python
+```
+This will include Visualization, Data Structure, Control Structure
+```
+# x axis to logarithmic scale
+plt.xscale('log')
+
+#show help info
+help(plt.hist)
+```
+Bins
+Too few bins will oversimplify reality and won't show you the deatils
+Too many bins will overcomplicate reality and won't show the bigger picture.
+```
+plt.clf() # cleans up plot so you can start afresh
+# change y ticks
+plt.yticks([0, 2, 4, 6, 8 10])
+## slightly modified version with different name
+plt.yticks([0, 2, 4, 6, 8, 10],
+          ['0', '2B', '4B', '6B', '8B', '10B'])
+
+#list combination
+list1 + list2
+
+# chage plt scatter size
+plt.scatter(x, y , s=nparray)
+
+#list to numpy array
+np_list = np.array(list)
+
+#customization
+plt.text(x, y, text) # add text on specific position
+plt.grid(True) # show grid line
+
+#Dictionary
+
+list.index(item) i# get the index of element, but not recoomended
+
+sth in box # check if sth in box
+
+world["sealand"] = 0.00028 # add or update pair
+del(world["sealand"]) # delete the pair sealand
+
+#Pandas
+store data in the form of dataframe
+
+# create yourself
+brics = pd.DataFrame(dict)
+
+#set row labels
+cars.index = listofname
+
+# set first column as row lable
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+#column access []
+brics["country"] # this select the column "country" from dataframe brics
+
+# seelct column but in datafram formate
+brics[["country"]]
+
+
+#Row access[]
+brics[1:4] # get the 2, 3, 4 row
+
+* loc (lable-based)
+* iloc (integer position-based)
+
+brics.loc["Ru"]
+brics.loc[["Ru"]]
+brics.loc[["Ru", "Cn", "In"]] # select multiple row
+
+brics.loc[[row], [column]]
+
+brics.loc[:, ["country", 'capital']] # all rows but two column
+
+brics.iloc[[1]]
+brics.iloc[[1, ,2, 3], [2, 3]]
