@@ -160,3 +160,28 @@ brics.loc[:, ["country", 'capital']] # all rows but two column
 brics.iloc[[1]]
 brics.iloc[[1, 2, 3], [2, 3]]
 
+#comparison
+special case : True == 1, False == 0
+
+# Boolean Operators
+and
+or
+not
+# For NumPy is different
+np.logical_and()
+np.logical_or()
+np.logical_not()
+
+np.logical_and(bmi > 21, bmi < 22)
+
+# if, elif, else
+if condition :
+    expression
+elif:
+    expression
+else :
+    expression
+
+
+
+
