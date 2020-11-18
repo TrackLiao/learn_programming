@@ -158,4 +158,5 @@ brics.loc[[row], [column]]
 brics.loc[:, ["country", 'capital']] # all rows but two column
 
 brics.iloc[[1]]
-brics.iloc[[1, ,2, 3], [2, 3]]
+brics.iloc[[1, 2, 3], [2, 3]]
+
