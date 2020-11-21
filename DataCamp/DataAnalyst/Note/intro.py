@@ -182,6 +182,12 @@ elif:
 else :
     expression
 
+# filtering pandas DataFrames
+is_huge = brics["area"] > 8
+brics[is_huge]
+brics[brics["area"] > 8]
 
+while conditin :
+    expression
 
 
